@@ -1,0 +1,101 @@
+@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+.body {
+    height: 100vh;
+    background-color: white;
+    width: 80vw;
+    margin: auto;
+    font-family:" Kumbh Sans",sans-serif;
+}
+
+.header {
+    display: flex;    
+    height: 10%;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    width : 80vw;
+
+}
+.main {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    width: 80vw;
+    margin: auto;
+}
+.div1{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.div2{
+    display: flex;
+}
+.div3 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    height: 40px;
+    
+}
+@media screen and (max-width: 800px) {
+    .body{
+        align-items: center;
+    }
+   .main {
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 100%;
+        margin: auto;
+   }
+   .mainimage{
+       width: 70vw;
+       flex-shrink: 1;
+       border-radius: 0px;
+       
+   }
+   
+   .div1{
+       display:none;
+   }
+    .change {
+        width: 70vw;
+        padding:0;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .stubborn{
+        width: 70vw;
+    }
+    .gone{
+        display: none;
+    }
+    .bottomicons{
+        width: 100%;
+
+    }
+   .bottombuttom{
+     width: 70vw;
+    }
+    .div3{
+        width: 100vh;
+        flex-direction: column;
+    }
+    .persistent{
+        visibility: visible
+    }
+}
+
+
+
+
+
+  
+  
