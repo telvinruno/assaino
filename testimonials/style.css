@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+.body{
+
+   font-size: 13px
+
+
+}
+.main{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin: 50px;
+    width: 90vw;
+    height: 80vh;
+    background-color: hsl(210, 46%, 95%);
+    
+}
+
+
+.container{
+    overflow: auto;
+    padding: 40px;
+    margin:50px;
+    display: grid;
+    width: 100%;
+    grid-gap: 2rem;
+    grid-template-rows: repeat( 2 ,1fr);
+    grid-template-columns: repeat(4 ,1fr) ;
+    grid-template-areas:
+    "one one two three"
+    "four five five three"
+    ;
+    
+}
+.one{
+    grid-area: one;
+    background-color: hsl(263, 55%, 52%);
+    border-radius: 10px;
+    background-image: url(bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 10%;
+    padding: 20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+    font-weight: 500, 600;
+
+}
+.two{
+    grid-area: two;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+    font-weight: 500, 600;
+
+}
+.three{
+    grid-area: three;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500, 600;
+
+}
+.four{
+    grid-area: four;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500, 600;
+
+}
+.five{
+    grid-area: five;
+    background-color: hsl(219, 29%, 14%);
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+    font-weight: 500, 600;
+
+}
+.img{
+ border-radius: 50px;   
+}
+.top{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.change{
+    color: gray;
+
+}
+@media only screen and (max-width: 700px) {
+
+    
+    .main{
+        margin: 0px;
+        height: 100vh;
+        width: 100vw;
+    }
+    .container{
+        
+        height: 100vh;
+        display: grid;
+        width: 100vw;
+        grid-gap: 1rem;
+        grid-template-rows:repeat( 5 ,1fr);
+        grid-template-columns: repeat(1 ,1fr) ;
+        grid-template-areas:
+        "one"
+        "two" 
+        "three"
+        "four" 
+        "five"
+    ;}
+    
+
+  }
