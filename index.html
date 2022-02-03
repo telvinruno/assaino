@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORFOLIO PAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+</head>
+<body>
+    <header style="background-color: grey;">
+        <nav>
+            <h1>Hi,am Telvin</h1>
+            <ul>
+                <li><a data-page="home" href="#home-page">Home</a></li>
+                <li><a data-page="projects" href="#projects-page">Projects</a></li>
+                <li><a data-page="hobbies" href="#hobbies-page">Hobbies</a></li>
+                <div class="floater"></div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section data-index="0" class="home" id="home-page">
+   
+
+            <div class="offset-card-grid" style="display: flex; ">
+                <div class="fancy-card" style="width: 30%;height: 40vh; padding: 20px; ">
+                    <h2>languages:</h2>
+                    <img class="fancy-card-image" width="100px" height="100px" src="pythonlogo.jpg" alt="Oops!"> 
+                    <img class="fancy-card-image" width="100px" height="100px"src="htmllogo.png" alt="Oops!">
+                    <img class="fancy-card-image" width="100px" height="100px"src="javascriptlogo.png" alt="Oops!">
+                    <img class="fancy-card-image" width="100px" height="100px"src="csslogo.png" alt="Oops!">
+                    <img class="fancy-card-image" width="100px" height="100px"src="reactlogo.png" alt="Oops!">
+                </div>
+                <div class="top" style="width: 40%;"><img src="myimage.jpg" width="400px" style="border-radius: 40px;" height="400px"alt="Oops!!">
+                <div style="color: blueviolet; font-size: 30px; background-color: beige; border-radius: 5px;">
+                     <h6>Telvin Runo</h6>
+                     <p style="background-color:beige"> front-end developer</p>
+                     <h6>+254759267667</h6>
+                     <h6>telvinrunoh@gmail.com</h6>
+                </div>
+                </div>
+            
+            </div>
+
+
+
+
+        </section>
+        <section id="projects-page" style="border-top-right-radius: px
+        ;" data-index="1" class="projects">
+             
+            <h1 >PROJECTS:
+            </h1>
+        
+            <div class="container">
+                <div class="one">
+                    <h3 style="color:blue">Testimonials page </h3>
+                    <hr style="color:greenyellow;">
+                    <p style="padding: 10px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat tempora deleniti labore ipsa expedita numquam nostrum, corrupti accusamus alias!</p>
+                     <a class="btn" href="#">Learn more</a>
+                </div>
+                <div class="two">
+                    <h3>Ecommerce web page</h3>
+                    <hr style="color: aqua;">
+                    <p style="padding: 10px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi veniam facere, beatae ut laborum, itaque debitis maxime voluptatibus harum facilis consectetur rerum blanditiis. Beatae, quidem?</p>
+                    <a class="btn" href="#">Learn more</a>
+                </div>
+                <div><h2>Lots more coming soon...</h2></div>
+               
+                
+            </div>
+
+
+        </section>
+        <section id="hobbies-page" data-index="2" class="hobbies">
+            <div class="slider">
+                <div class="slides">
+                     
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio2">
+        
+                   
+                    <div class="slide first">
+                        <label style="font-size: larger;" for="slide first"><b style="color: lawngreen;">CTFs</b> </label>
+                        <img src="HTB.png" height="350px" width="800px" alt="Oops">
+                    </div>
+                    <div class="slide-second">
+                          <label style="font-size: larger;" for="slide-second"><b style="color: darkred;">Poultry farming</b></label>
+                        <img src="poultry.jpg"  height="350px" width="800px" alt="Oops">
+                    </div>
+                    <div class="slide-third">
+                        <p style="font-size: larger; padding-left: 40px;" for="slide-third"><b style="color: brown;">Basketball</b> </p>
+                        <img src="pic.jpg" height="350px" width="800px" alt="Oops">
+                    </div>
+                   
+                    <div class="navigation-auto">
+                             <div class="auto-btn-1"></div>
+                             <div class="auto-btn-2"></div>
+                             <div class="auto-btn-3"></div>
+                    </div>
+                </div>
+                <div class="navigation-manual">
+                    <label for="radio1" class="mannual-btn"></label>
+                    <label for="radio2" class="mannual-btn"></label>
+                    <label for="radio3" class="mannual-btn"></label>
+                </div>
+            </div>
+            <script>
+                let counter =1;
+                setInterval(function(){
+                    document.getElementById('radio'+counter).checked=true;
+                    counter++
+                    if(counter>3){
+                        counter=1;
+                    }
+                },4000)
+            </script>
+        </section>
+    </main>
+</body>
+</html>
