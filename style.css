@@ -1,0 +1,333 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  /*rgba(255, 198, 9, 0.418) ; */
+  background-image: url("./images/9edited.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+.content {
+  width: 75%;
+  height: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+.about {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  background: white;
+  grid-column: 7/13;
+  grid-row: 3/10;
+  z-index: 10;
+  box-shadow: 0 0 25px 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  transition: transform 1ms, box-shadow 1s ease-in;
+}
+.projos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(247, 200, 129);
+  position: relative;
+  top: 0;
+  grid-row: 1/8;
+  grid-column: 4/10;
+  z-index: 4;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.7),
+    inset 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  transition: transform 1ms, box-shadow 1s ease-in;
+}
+.hobbies {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background: white;
+  grid-column: 2/8;
+  grid-row: 4/11;
+  z-index: 2;
+  box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.9),
+    inset 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  transition: transform 1ms, box-shadow 1s ease-in;
+}
+.hobbies:hover,
+.hobbies:focus {
+  transform: scale(1.75);
+  z-index: 12;
+  box-shadow: 0 0 25px 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  left: 100px;
+  bottom: 60px;
+}
+.about:hover,
+.about:focus {
+  transform: scale(1.75);
+  z-index: 12;
+  right: 150px;
+  bottom: 50px;
+}
+.projos:hover,
+.projos:focus {
+  top: 50px;
+  transform: scale(1.75);
+  z-index: 12;
+  box-shadow: 0 0 25px 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  width: 80%;
+  padding: 10px;
+}
+.img-style {
+  transform: rotate(120deg);
+  background: white;
+  animation: spin 4s infinite;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: black;
+}
+.container-image {
+  width: 80%;
+  height: 80%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  position: relative;
+  height: auto;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.card .card-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-left-color: rgba(255, 255, 255, 0.1);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 50%
+  );
+}
+.card .pic {
+  transition: all 0.8s ease-out;
+  transform: rotateY(0deg) translateZ(100px);
+  transform-origin: left;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+.card .pic img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.card .description {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 40px;
+  line-height: 1.5;
+  color: #fff;
+  opacity: 0.5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.card:hover .pic {
+  transform: rotateY(-180deg) translateZ(200px);
+  transform-origin: center;
+}
+
+p {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: rgb(250, 153, 8);
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.3s;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 200;
+  font-size: smaller;
+}
+p span {
+  position: absolute;
+  display: block;
+}
+p span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+p:hover span:nth-child(1) {
+  left: 100%;
+  transition: 2s;
+}
+p span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+p:hover span:nth-child(3) {
+  right: 100%;
+  transition: 2s;
+  transition-delay: 0.5s;
+}
+
+* {
+  font-family: sans-serif;
+}
+.banner {
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+}
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+#slide-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.7));
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+}
+
+.content-projos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  margin-left: 10px;
+  text-align: start;
+  color: white;
+}
+
+.cool-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+.slider-two {
+  margin-top: 50px;
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.slides {
+  width: 400%;
+  height: 250px;
+  display: flex;
+}
+.slides input {
+  display: none;
+}
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+.navigation-manual {
+  position: absolute;
+  width: 400px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.mannual-btn {
+  border: 2px solid gray;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.mannual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+.mannual-btn:hover {
+  background-color: blue;
+}
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 360px;
+}
+.navigation-auto div {
+  border: 3px solid gold;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn-1 {
+  background-color: gold;
+}
+#radio2:checked ~ .navigation-auto .auto-btn-2 {
+  background-color: gold;
+}
+#radio3:checked ~ .navigation-auto .auto-btn-3 {
+  background-color: gold;
+}

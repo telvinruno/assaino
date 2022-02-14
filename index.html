@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="slider()">
+    <div class="main-container">
+      <h2 style="margin-left: 20px">Hi,am Telvin</h2>
+      <div class="content">
+        <div
+          class="about"
+          style="
+            display: flex;
+            gap: 2rem;
+            justify-content: space-around;
+            width: 100%S;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              width: 40%;
+            "
+          >
+            <div style="width: 100%">
+              <p
+                style="
+                  width: 100%;
+                  text-align: start;
+                  font-family: Arial, Helvetica, sans-serif;
+                  width: 80%;
+                "
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+                I'm a front end developer with a passion for the job.Currently
+                undergoing training with the Jitu.
+              </p>
+            </div>
+            <b style="margin-left: 20px; font-size: small">Skilled in:</b>
+
+            <div class="container">
+              <img
+                class="img-style"
+                src="./images/python.jpg"
+                width="45px"
+                height="45px"
+                alt="Oops!"
+              />
+              <img
+                class="img-style"
+                src="./images/htmllogo.ico"
+                width="45px"
+                height="45px"
+                alt="Oops!"
+              />
+              <img
+                class="img-style"
+                src="./images/css logo.png"
+                style="border-radius: 35%"
+                width="45px"
+                height="45px"
+                alt="Oops!"
+              />
+              <img
+                class="img-style"
+                src="./images/js.jpg"
+                width="45px"
+                height="45px"
+                alt="Oops!"
+              />
+              <img
+                class="img-style"
+                src="./images/reactlogo.jpg"
+                width="45px"
+                height="45px"
+                alt="Oops!"
+              />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <div class="container-image">
+              <div class="column">
+                <div class="card">
+                  <div class="card-background"></div>
+                  <div class="pic">
+                    <img
+                      src="./images/myimage1.jpg"
+                      style="border-radius: 20px"
+                      width="250px"
+                      alt="Oops!"
+                    />
+                  </div>
+                  <div class="description">
+                    <h3>Telvin Runo</h3>
+                    <h4>telvinrunoh@gmail.com</h4>
+                    <h4>0759267667</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="projos">
+          <div class="banner">
+            <div class="slider">
+              <img
+                src="./images/order-summary.jpg"
+                alt="Something went wrong"
+                id="slide-img"
+              />
+            </div>
+            <div class="overlay">
+              <div class="content-projos">
+                <h1>Recent projects:</h1>
+              </div>
+            </div>
+          </div>
+          <script>
+            let slideImg = document.getElementById("slide-img");
+            let images = new Array(
+              "./images/desktop-preview-cropped.jpg",
+              "./images/order-summary.jpg",
+              "./images/testimonials.jpg"
+            );
+            let length = images.length;
+            let i = 0;
+            function slider() {
+              if (i > length - 1) {
+                i = 0;
+              }
+              slideImg.src = images[i];
+              i++;
+              setTimeout("slider()", 5000);
+            }
+          </script>
+        </div>
+        <div class="hobbies">
+          <div class="cool-container" style="gap: 0">
+            <h3 style="padding-left: 0">Hobbies</h3>
+            <p>
+              Below are but some of the activities i take part in during my free
+              time
+            </p>
+
+            <div class="slider-two">
+              <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio3" />
+                <input type="radio" name="radio-btn" id="radio2" />
+
+                <div class="slide first">
+                  <img
+                    src="./images/HTB.png"
+                    height="250px"
+                    width="400px"
+                    alt="Oops"
+                  />
+                </div>
+                <div class="slide-third">
+                  <img
+                    src="./images/pic.jpg"
+                    height="250px"
+                    width="400px"
+                    alt="Oops"
+                  />
+                </div>
+
+                <div class="slide-second">
+                  <img
+                    src="./images/poultry.jpg"
+                    height="250px"
+                    width="400px"
+                    alt="Oops"
+                  />
+                </div>
+
+                <div class="navigation-auto">
+                  <div class="auto-btn-1"></div>
+                  <div class="auto-btn-2"></div>
+                  <div class="auto-btn-3"></div>
+                </div>
+              </div>
+              <div class="navigation-manual">
+                <label for="radio1" class="mannual-btn"></label>
+                <label for="radio2" class="mannual-btn"></label>
+                <label for="radio3" class="mannual-btn"></label>
+              </div>
+            </div>
+            <script>
+              let counter = 1;
+              setInterval(function () {
+                document.getElementById("radio" + counter).checked = true;
+                counter++;
+                if (counter > 3) {
+                  counter = 1;
+                }
+              }, 4000);
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
