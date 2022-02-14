@@ -1,0 +1,29 @@
+body {
+  background-color: white;
+  margin: 0;
+  align-items: center;
+}
+.one {
+  background-image: url("./pics/hero-cover.3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100vw;
+  color: white;
+}
+.two {
+  height: 2000px;
+  width: 100vw;
+}
+.three {
+  height: 1000px;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn {
+  background-color: blue;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
