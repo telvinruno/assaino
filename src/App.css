@@ -1,0 +1,26 @@
+* {
+  background-color: rgb(202, 52, 77);
+}
+.alert-danger {
+  color: red;
+  background-color: white;
+  font-size: large;
+}
+.alert-success {
+  color: green;
+  background-color: white;
+  font-size: large;
+}
+.button {
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.parent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
